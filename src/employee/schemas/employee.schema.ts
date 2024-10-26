@@ -22,6 +22,12 @@ export class Employee {
 
   @Prop({ type: String, required: true })
   department: string;
+
+  @Prop({ type: String, required: true })
+  password: string;
+
+  @Prop({ type: String, enum: ['admin', 'manager', 'employee'], default: 'employee' })
+  role: string;
 }
 
 export const EmployeeSchema = SchemaFactory.createForClass(Employee);
