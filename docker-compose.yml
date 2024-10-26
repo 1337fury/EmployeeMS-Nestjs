@@ -2,16 +2,13 @@ version: '3.8'
 
 services:
   app:
-    build: .
+    build: . 
     ports:
       - '3000:3000'
     depends_on:
       - mongo
     environment:
       - MONGODB_URI=mongodb://mongo:27017/employee_db
-    volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
     restart: unless-stopped
 
   mongo:
