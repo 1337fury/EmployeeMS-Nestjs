@@ -24,4 +24,8 @@ export class CreateEmployeeDto {
   @IsString()
   @IsNotEmpty()
   department: string;
+
+  @IsString()
+  @IsNotEmpty()
+  password: string;
 }
